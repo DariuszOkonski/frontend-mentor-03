@@ -1,5 +1,36 @@
 const content__container = document.querySelector('.content__container');
 let dayOfWeek = new Date().getDay() - 1;
+const jsonData = [
+    {
+      "day": "mon",
+      "amount": 17.45
+    },
+    {
+      "day": "tue",
+      "amount": 34.91
+    },
+    {
+      "day": "wed",
+      "amount": 52.36
+    },
+    {
+      "day": "thu",
+      "amount": 31.07
+    },
+    {
+      "day": "fri",
+      "amount": 23.39
+    },
+    {
+      "day": "sat",
+      "amount": 43.28
+    },
+    {
+      "day": "sun",
+      "amount": 25.48
+    }
+  ];
+
 
 const buildPost = (day, amount, index) => {
     const before = document.createElement('div');
@@ -42,9 +73,10 @@ const buildChart = (data) => {
 
 const run = async () => {
     try {
+        // json not working in ghpages
         const response = await fetch('../data.json')
         const data = await response.json();
-        buildChart(data);        
+        buildChart(jsonData);        
 
     } catch (error) {
         console.log('no data fetched')        
