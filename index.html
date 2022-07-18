@@ -7,37 +7,97 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Expenses chart component</title>
+  <link rel="stylesheet" href="css/styles.min.css">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <script defer src="js/app.js"></script>
 </head>
 <body>
 
-  My balance
-  $921.48
+  <div class="container">
+    <header class="header">
+      <div class="header--left">
+        <span class="title">My balance</span>
+        <span class="amount">$921.48</span>
+      </div>
+      <div class="header--right">
+        <img src="images/logo.svg" alt="logo">
+      </div>
+    </header>
+    
+    <main class="content">
+      <h1 class="content__header">Spending - Last 7 days</h1>
+      
+      <div class="content__container">
+        <!-- <div class="post">
+          <div class="post__container">
+            <div class="post__inner">
+              <div class="before">$12.24</div>
+            </div>  
+          </div>
+          <span class="post__day">mon</span>
+        </div>
 
-  Spending - Last 7 days
+        <div class="post">
+          <div class="post__container">
+            <div class="post__inner"></div>  
+          </div>
+          <span class="post__day">tue</span>
+        </div>
+        
+        <div class="post">
+          <div class="post__container">
+            <div class="post__inner current"></div>  
+          </div>
+          <span class="post__day">wed</span>
+        </div>
 
-  mon
-  tue
-  wed
-  thu
-  fri
-  sat
-  sun
+        <div class="post">
+          <div class="post__container">
+            <div class="post__inner"></div>  
+          </div>
+          <span class="post__day">thu</span>
+        </div>
 
-  Total this month
-  $478.33
+        <div class="post">
+          <div class="post__container">
+            <div class="post__inner"></div>  
+          </div>
+          <span class="post__day">fri</span>
+        </div>
 
-  +2.4%
-  from last month
+        <div class="post">
+          <div class="post__container">
+            <div class="post__inner"></div>  
+          </div>
+          <span class="post__day">sat</span>
+        </div>
+
+        <div class="post">
+          <div class="post__container">
+            <div class="post__inner"></div>  
+          </div>
+          <span class="post__day">sun</span>
+        </div> -->
+      </div>
+      
+      <div class="content__summary">
+        <div class="summary summary--left">
+          <span class="summary__title">Total this month</span>
+          <span class="summary__amount">$478.33</span>
+        </div>
+
+        <div class="summary summary--right">
+          <span class="summary__percent">+2.4%</span>
+          <span class="summary__time-period">from last month</span>
+        </div>
+      </div>
+    </main>
+  </div> 
   
-  <div class="attribution">
+  
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
 </body>
 </html>

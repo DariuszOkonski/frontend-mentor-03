@@ -1,0 +1,201 @@
+
+$mobile-width: 375px;
+$desktop-widht: 1440px;
+
+$primary-soft-red: hsl(10, 79%, 65%);
+$primary-cyan: hsl(186, 34%, 60%);
+$primary-gray: rgb(161, 158, 158);
+$neutral-dark-brown: hsl(25, 47%, 15%);
+$neutral-medium-brown: hsl(28, 10%, 53%);
+$neutral-cream: hsl(27, 66%, 92%);
+$neutral-very-pale-orange: hsl(33, 100%, 98%);
+
+
+$primary-font-size: 18px;
+$primary-font-family: Arial;
+// - Family: [DM Sans](https://fonts.google.com/specimen/DM+Sans)
+// - Weights: 400, 700
+$border-radius: 12px;
+$primary-padding: 20px 10px;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-size: $primary-font-size;
+    font-family: $primary-font-family;
+    background-color: $neutral-cream;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: $mobile-width;
+    margin: 10px;
+}
+
+.header {
+    background-color: $primary-soft-red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $primary-padding;
+    border-radius: $border-radius;
+    color: #fff;
+    margin-bottom: 20px;
+
+    &--left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .title {
+            font-size: 0.9rem;
+        }
+
+        .amount {
+            margin-top: 10px;
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+    }
+}
+
+.content {
+    background-color: $neutral-very-pale-orange;
+    padding: $primary-padding;
+    border-radius: $border-radius;
+
+    &__header {
+        font-size: 1.4rem;
+    }
+
+    &__container {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .post {
+            flex-basis: 12%;
+            min-height: 200px;
+
+            display: flex;
+            flex-direction: column;
+            
+            &__container {
+                height: 220px;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+            }
+
+            &__inner {
+                position: relative;
+                height: 40%;
+                background-color: $primary-soft-red;
+                border-radius: 5px;
+                cursor: pointer;
+
+                .before {
+                    display: none;
+                }
+
+                &:hover {
+                    background-color: lighten($primary-soft-red, 5);
+
+                    .before {
+                        display: block;
+                        position: absolute;
+                        top: -40px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        background-color: #000;
+                        color: #fff;
+                        padding: 4px;
+                        border-radius: 4px;
+                        font-size: 0.8rem;
+                    }
+                }
+
+            }
+
+            &__inner.current {
+                background-color: $primary-cyan;
+
+                &:hover {
+                    background-color: lighten($primary-cyan, 5);
+                }
+            }
+
+            &__day {
+                height: 20%;
+                margin-top: 10px;
+                text-align: center;
+                font-size: 0.8rem;
+                color: $primary-gray;
+            }
+        }
+    }
+
+    &__summary {
+        margin-top: 50px;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            left: 0;
+            top: -25px;
+            content: '';
+            display: block;
+            height: 3px;
+            width: 100%;
+            background-color: $neutral-cream
+        }
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .summary {
+
+            span {
+                display: block;
+            }
+
+            &__title {
+                color: $primary-gray;
+                font-size: 0.9rem;
+                text-align: left;
+            }
+
+            &__amount {
+                font-size: 1.6rem;
+                font-weight: bold;
+                margin-top: 10px;
+                text-align: left;
+            }
+
+            &__percent {
+                font-weight: bold;
+                text-align: right;
+            }
+
+            &__time-period {
+                color: $primary-gray;
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+
+.attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }

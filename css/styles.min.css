@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  font-size: 18px;
+  font-family: Arial;
+  background-color: #f8e9dd;
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 375px;
+  margin: 10px;
+}
+
+.header {
+  background-color: #ec775f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 10px;
+  border-radius: 12px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.header--left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.header--left .title {
+  font-size: 0.9rem;
+}
+
+.header--left .amount {
+  margin-top: 10px;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.content {
+  background-color: #fffaf5;
+  padding: 20px 10px;
+  border-radius: 12px;
+}
+
+.content__header {
+  font-size: 1.4rem;
+}
+
+.content__container {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content__container .post {
+  -ms-flex-preferred-size: 12%;
+      flex-basis: 12%;
+  min-height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.content__container .post__container {
+  height: 220px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.content__container .post__inner {
+  position: relative;
+  height: 40%;
+  background-color: #ec775f;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.content__container .post__inner .before {
+  display: none;
+}
+
+.content__container .post__inner:hover {
+  background-color: #ef8a76;
+}
+
+.content__container .post__inner:hover .before {
+  display: block;
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #000;
+  color: #fff;
+  padding: 4px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.content__container .post__inner.current {
+  background-color: #76b5bc;
+}
+
+.content__container .post__inner.current:hover {
+  background-color: #87bec4;
+}
+
+.content__container .post__day {
+  height: 20%;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #a19e9e;
+}
+
+.content__summary {
+  margin-top: 50px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content__summary::before {
+  position: absolute;
+  left: 0;
+  top: -25px;
+  content: '';
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #f8e9dd;
+}
+
+.content__summary .summary span {
+  display: block;
+}
+
+.content__summary .summary__title {
+  color: #a19e9e;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.content__summary .summary__amount {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.content__summary .summary__percent {
+  font-weight: bold;
+  text-align: right;
+}
+
+.content__summary .summary__time-period {
+  color: #a19e9e;
+  font-size: 0.9rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+/*# sourceMappingURL=styles.min.css.map */
